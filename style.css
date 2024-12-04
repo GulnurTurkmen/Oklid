@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #FFE4E1; /* Toz pembe arka plan */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #c2185f;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Filtreler */
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filters input,
+.filters select {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.filters input:focus,
+.filters select:focus {
+    border-color: #dd2374;
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Tablo Stilleri */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #ef096d;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+
+th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+/* Karakter resmi ve ismi için stil */
+td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+td img:hover {
+    transform: scale(1.2);
+}
+
+/* Sayfalama */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #af4c87;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #ef096d;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pagination button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Karakter Detayları */
+.character-detail {
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.detail-card {
+    display: flex;
+    gap: 30px;
+    padding: 25px;
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.detail-card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.detail-card img:hover {
+    transform: scale(1.05);
+}
+
+.detail-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.detail-info h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+.detail-info p {
+    margin: 12px 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.detail-info strong {
+    color: #333;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+/* Sayfa boyutu seçici */
+.page-size {
+    margin: 20px 0;
+    text-align: right;
+}
+
+.page-size select {
+    padding: 8px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Mesajlar */
+.message {
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-size: 1.1em;
+}
+
+.message.error {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+#noResults {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Loading animasyonu */
+#loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2em;
+    color: #4CAF50;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .detail-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detail-card img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Hover efektleri */
+input:hover, select:hover {
+    border-color: #4CAF50;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.detail-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Status renkleri */
+td:nth-child(2) {
+    font-weight: bold;
+}
+
+td:nth-child(2):contains('Alive') {
+    color: #4CAF50;
+}
+
+td:nth-child(2):contains('Dead') {
+    color: #f44336;
+}
+
+td:nth-child(2):contains('unknown') {
+    color: #ff9800;
+}

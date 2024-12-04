@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty Characters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rick and Morty Characters</h1>
+        
+        <!-- Filtreler -->
+        <div class="filters">
+            <input type="text" id="nameFilter" placeholder="İsme göre filtrele...">
+            <select id="statusFilter">
+                <option value="">Tüm Durumlar</option>
+                <option value="alive">Alive</option>
+                <option value="dead">Dead</option>
+                <option value="unknown">Unknown</option>
+            </select>
+            <select id="genderFilter">
+                <option value="">Tüm Cinsiyetler</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="genderless">Genderless</option>
+                <option value="unknown">Unknown</option>
+            </select>
+            <input type="text" id="speciesFilter" placeholder="Türe göre filtrele...">
+        </div>
+
+        <!-- Sayfa boyutu seçimi -->
+        <div class="page-size">
+            <label>Sayfa başına gösterim: </label>
+            <select id="pageSize">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+
+        <!-- Tablo -->
+        <div class="table-container">
+            <table id="charactersTable">
+                <thead>
+                    <tr>
+                        <th>İsim</th>
+                        <th>Durum</th>
+                        <th>Tür</th>
+                        <th>Cinsiyet</th>
+                        <th>Köken</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- JavaScript ile doldurulacak -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Sayfalama -->
+        <div class="pagination">
+            <button id="prevPage">Önceki</button>
+            <span id="currentPage">Sayfa: 1</span>
+            <button id="nextPage">Sonraki</button>
+        </div>
+
+        <!-- Karakter Detayları -->
+        <div id="characterDetail" class="character-detail">
+            <!-- JavaScript ile doldurulacak -->
+        </div>
+
+        <!-- Yükleniyor ve Hata Mesajları -->
+        <div id="loading" class="message">Yükleniyor...</div>
+        <div id="error" class="message error"></div>
+        <div id="noResults" class="message">Sonuç bulunamadı.</div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
